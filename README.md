@@ -5,11 +5,6 @@
   <a href="https://github.com/yaalpha/"><img src="https://readme-typing-svg.herokuapp.com/?lines=Full-stack%20developer;Experienced%20Discord%20Bot%20Dev;A%20Lot%20of%20coding%20experience;Always%20learning%20new%20things&font=Fira%20Code&center=true&width=440&height=45&color=ffffff&vCenter=true&size=22"></a>
 </p>
 <p align="center">
-<a href="https://discord.com/users/698223526309527602">
-        <img src="https://lanyard.cnrad.dev/api/698223526309527602?theme=dark&bg=0d1117&animated=true&hideDiscrim=true&borderRadius=30px&idleMessage=Probably%20doing%20something%20else..."/>
-    </a>
-</p>
-<p align="center">
   <a href="https://frazix.tk">
     <img src="https://skillicons.dev/icons?i=html,css,js,nodejs,ts,cs&perline=8" />
   </a>
