@@ -1,5 +1,5 @@
 <h1 align="center">
-    💓 Programming Wizard
+    Programming Wizard
 </h1>
 <p align="center">
   <a href="https://github.com/yaalpha/"><img src="https://readme-typing-svg.herokuapp.com/?lines=Full-stack%20developer;Experienced%20Discord%20Bot%20Dev;A%20Lot%20of%20coding%20experience;Always%20learning%20new%20things&font=Fira%20Code&center=true&width=440&height=45&color=ffffff&vCenter=true&size=22"></a>
