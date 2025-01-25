@@ -47,7 +47,6 @@ html {
   height: -webkit-fill-available;
 }
 
-// Добавим эффект искажения при скролле
 @media (prefers-reduced-motion: no-preference) {
   body {
     background-attachment: fixed;
