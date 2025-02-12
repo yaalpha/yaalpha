@@ -2,7 +2,7 @@
     
 </h1>
 <p align="center">
-  <a href="https://github.com/yaalpha/"><img src="https://readme-typing-svg.herokuapp.com/?lines=&font=Fira%20Code&center=true&width=440&height=45&color=ffffff&vCenter=true&size=22"></a>
+  <a href="https://github.com/yaalpha/"><img src="https://readme-typing-svg.herokuapp.com/?lines=UI/UX%20designer;Full-stack%20developer&font=Fira%20Code&center=true&width=440&height=45&color=ffffff&vCenter=true&size=22"></a>
 </p>
 <p align="center">
   <a href="">
