@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="app">
       <ProfileCard
-        avatarUrl="./assets/avatar.png"
+        avatarUrl="./assets/avatar.jpg"
         name="Альфа"
         title="Full-stack Developer"
       />
