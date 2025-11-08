@@ -7,7 +7,7 @@ function App() {
       <ProfileCard
         avatarUrl="./assets/avatar.jpg"
         name="Альфа"
-        title="Full-stack Developer"
+        title="Full-stack Developer\nI'm Luna's obedient girl ><"
       />
     </div>
   );
