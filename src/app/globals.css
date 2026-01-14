@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+:root {
+  --background: #060606;
+  --foreground: #ffffff;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  overflow: hidden;
+  margin: 0;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.terminal-glow {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.perspective-container ul {
+  transform: rotateX(15deg) rotateY(-5deg);
+  transform-style: preserve-3d;
+}
+
+.perspective-container li {
+  -webkit-box-reflect: bottom 2px linear-gradient(transparent, rgba(255,255,255,0.05));
+  transition: all 0.5s ease;
+}
+
+[ref="trackRef"] {
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
