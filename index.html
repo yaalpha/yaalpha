@@ -137,55 +137,55 @@ $&amp;&amp;X; $&amp;$;&amp;&amp;X&amp;x+X .;:.::&amp;&amp;&amp;.;.;+xx+XXXx+:;;:
     <div class="cell code-box">
       <div class="code-scroller">
         <div class="code-content">import { NextRequest, NextResponse } from 'next/server';
-          import { db } from '@/lib/db';
-          import { verifyAuth } from '@/lib/auth';
+import { db } from '@/lib/db';
+import { verifyAuth } from '@/lib/auth';
 
-          export async function GET(req: NextRequest) {
-          try {
-          const authHeader = req.headers.get('authorization');
-          const isValid = await verifyAuth(authHeader);
+export async function GET(req: NextRequest) {
+  try {
+    const authHeader = req.headers.get('authorization');
+    const isValid = await verifyAuth(authHeader);
 
-          if (!isValid) {
-          return NextResponse.json(
-          { error: 'Unauthorized Access' },
-          { status: 401 }
-          );
-          }
+    if (!isValid) {
+      return NextResponse.json(
+        { error: 'Unauthorized Access' },
+        { status: 401 }
+      );
+    }
 
-          const url = new URL(req.url);
-          const userId = url.searchParams.get('id');
+    const url = new URL(req.url);
+    const userId = url.searchParams.get('id');
 
-          if (!userId) {
-          return NextResponse.json(
-          { error: 'User ID is required' },
-          { status: 400 }
-          );
-          }
+    if (!userId) {
+      return NextResponse.json(
+        { error: 'User ID is required' },
+        { status: 400 }
+      );
+    }
 
-          const user = await db.query(
-          'SELECT id, name, role FROM users WHERE id = $1',[userId]
-          );
+    const user = await db.query(
+      'SELECT id, name, role FROM users WHERE id = $1',[userId]
+    );
 
-          if (!user.length) {
-          return NextResponse.json(
-          { error: 'User not found in registry' },
-          { status: 404 }
-          );
-          }
+    if (!user.length) {
+      return NextResponse.json(
+        { error: 'User not found in registry' },
+        { status: 404 }
+      );
+    }
 
-          return NextResponse.json({
-          status: 'success',
-          timestamp: Date.now(),
-          data: user[0],
-          });
-          } catch (error) {
-          console.error('[API_ERROR]:', error);
-          return NextResponse.json(
-          { error: 'Internal Server Error' },
-          { status: 500 }
-          );
-          }
-          }</div>
+    return NextResponse.json({
+      status: 'success',
+      timestamp: Date.now(),
+      data: user[0],
+    });
+  } catch (error) {
+    console.error('[API_ERROR]:', error);
+    return NextResponse.json(
+      { error: 'Internal Server Error' },
+      { status: 500 }
+    );
+  }
+}</div>
       </div>
     </div>
 
