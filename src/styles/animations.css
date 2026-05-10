@@ -1,0 +1,43 @@
+@keyframes showWrapper { to { opacity: 1; } }
+@keyframes blinker { 50% { opacity: 0; } }
+@keyframes scanlineAnim { 
+    0% { transform: translateY(-5px); } 
+    100% { transform: translateY(var(--scan-end)); } 
+}
+@keyframes scrollCode { 0%, 10% { transform: translateY(0); } 90%, 100% { transform: translateY(calc(-100% + 110px)); } }
+@keyframes titleReveal { 0% { opacity: 0; transform: translateY(20px); filter: blur(4px); } 100% { opacity: 1; transform: translateY(0); filter: blur(0); } }
+@keyframes panGrid { 0% { background-position: 0 0; } 100% { background-position: 30px 30px; } }
+@keyframes marqueeScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+@keyframes spinCube { 0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); } 100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); } }
+.cell::after {
+    content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: var(--line-color); z-index: 50;
+    transform-origin: top; pointer-events: none;
+    animation: shutterReveal 0.6s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+@keyframes shutterReveal { 0% { transform: scaleY(1); } 100% { transform: scaleY(0); } }
+.cell:nth-child(1)::after { animation-delay: 0.2s; }
+.cell:nth-child(2)::after { animation-delay: 0.3s; }
+.cell:nth-child(3)::after { animation-delay: 0.25s; }
+.cell:nth-child(4)::after { animation-delay: 0.4s; }
+.cell:nth-child(5)::after { animation-delay: 0.45s; }
+.cell:nth-child(6)::after { animation-delay: 0.5s; }
+.cell:nth-child(7)::after { animation-delay: 0.6s; }
+.cell:nth-child(8)::after { animation-delay: 0.65s; }
+.cell:nth-child(9)::after { animation-delay: 0.7s; }
+.cell:nth-child(10)::after { animation-delay: 0.75s; }
+.cell:nth-child(11)::after { animation-delay: 0.8s; }
+.do-swap::before {
+    content: ""; 
+    position: absolute; 
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: var(--line-color); 
+    z-index: 60;
+    animation: swapShutter 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+@keyframes swapShutter {
+    0% { transform: scaleY(0); transform-origin: top; }
+    49.9% { transform: scaleY(1); transform-origin: top; }
+    50% { transform: scaleY(1); transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+}

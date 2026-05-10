@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Sudo Display';
+    src: url('/fonts/sudo.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+:root {
+    --bg-color: #e5e5e5; 
+    --line-color: #111111;
+    --accent-color: #ea2e2e; 
+    --font-mono: 'Space Mono', monospace;
+    --font-sudo: 'Sudo Display', sans-serif;
+}
+html.dark-theme {
+    --bg-color: #111111; 
+    --line-color: #e5e5e5;
+}

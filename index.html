@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>yaalpha</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <link rel="preload" href="/fonts/sudo.otf" as="font" type="font/otf" crossorigin="anonymous">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <script type="module" src="/src/main.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="cell header-logo">SYS.CORE</div>
+
+    <div class="cell header-nav">
+      <a href="#" class="nav-link" id="btnAbout">ABOUT_ME</a>
+      <span class="nav-separator">//</span>
+      <a href="#" class="nav-link" id="btnProjects">PROJECTS</a>
+      <span class="nav-separator">//</span>
+      <span class="nav-clock" id="liveClock">00:00:00</span>
+    </div>
+
+    <div class="cell theme-toggle" id="themeToggle" title="Toggle System Theme">
+      <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+      <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+    </div>
+
+    <div class="cell avatar-box" id="profileBox">
+      <div class="avatar-img">
+        <div class="scanline"></div>
+        <div class="ascii-container">
+          <pre class="ascii-art ascii-light">
+xXXXxXXXXXX$X+X+Xx++XxXXX ..::..;; .::;.:+xX  xx$$X..XXX;x$X. +Xx;++xX;..x++x++XxxXXXXXXXXX$$X$
+$XXXXXXXXXXXXXX+XX;XX+xXXX....;   ;xxX  xX&amp;Xx ;+XXX .X$&amp;&amp;X..::X; ..;X+X.;+XXxxX+xXXXXXxXXXXXXX$
+XXXXXXXXXXXXXxXXX+X;;x+x;XX:+.:.  $xXX  +xx$$ ++;.; :$$$X  XXXX;XX  $xX++xX;xXXXXxXXx+XXXxXXXXX
+XXXXXXX$XXX+xXxxXx+xxx+xx+;x X++x :+x$x .XX+X xXXXx XXX$+ $$X$X .:++; +x;+;X+XxxXXXXXXx+XXXX$Xx
+XX$XxXxxXX;Xx+x+X+XXXXXX;$. x+Xx+  ;X$X  ;xX+ xxxxX X$xX: XXXX  xxXXXX..;;;+XXX;XXXXXxXXXXXXXXX
+XXXX+XXXxXX++X+x+XxXXX;+:XXX  &amp;xXX xxX.                   $XXx +XxXx  :X.+x+xxx++XXXXXxxXXXXXX:
+xXXXXxXXXXXXxXxxXXXx+;$;XXXXx  Xx                 .            X$Xx  Xx;.;;xxxxXxxx++X+. ;X+++X
+:;;;;;xX+;.:.:;..  .+XX&amp;; XXX:              .   :; . .           X  XXx+X;Xx+xx+  x;;;+X;+xXXXX
+.;;:;:;;:;;:.:;+;;.;+X$$XX.;;          .. +:;xX  ;X;;X.         .  +XXX .;;XxXXxX;;;:;:X+X$XxXX
+  X+$+;.:;:..::;:;x;:.;$$xx        ..;x::;;x       ;;$X;;;.    .  . X .xX$X+.xx;+;+x+XXXXXx+XXX
+:+xXXxXxXXXX$;:;:;xx$XX. X       ;;++:x$              xXX;:;:.   .;.  Xx$$+;X$X++XX;xxxxxXXXX+X
+  .+XXXXxXX+XXXXxXX+X$X$.     .::X+xXx                   +XX;;;++x:.;::. .X+xXXxXxXxX+xx.xXXXXX
+$$$ XxXxx+xXXxXxXxX+ .$X    ;+xxxX$                         +X$X+;.;::..X$XX$$X++++++xXXxXxxXXX
+XXX+ +XX:.X+XXX+X&amp;XXXx: .;;X;+xX&amp;   ..::;;X:        ;Xx;+. .. .XX;;x;x; Xx .$$X;+x+x+XXXXx+X+Xx
+ ..:X;XXxX;x+X+Xx&amp;+$$&amp;Xx+;+;;XXX. .  :;x;;+X.      x$$$$$XXX    $xXxXXX;.xXXx+;;;;xx+Xxx+XX+xX.
+   .  ;;.   .;;;X$XX;XXX;XXXx+X..;;+;;;;x;X$    :..+$&amp;&amp;$+;;+X.  X$;;+X;.;;x$;$+xx.;;x+Xxx+x+Xx+
+.;XXX++;;;x;;X+;Xx$Xx+;XXxx;xx;;;+xx    .;+.     :. $$.     :;x:.;x&amp;XXxXX; XxX+.:;+xxxXxXxxxxXx
+XX&amp;Xx;x;;;:;;;;;x+&amp;$   ::+;;xXXx;;:    .    .    .:.         ;Xx;.X+XX;. xX$X$X;xx;;;:;xX;...xX
+&amp;X&amp;X$$xX+;;.::.+xX+.;. ;;;;;Xxx+;.    ..   ;.     ..     ..   .XX.+XXX:;.;.X ;X+;:::.::;;;;;;::
+X XX$XXXXXXXxXxX+X&amp;.  .+x;;+$ x.    .      XXXxXX$X;         .... ;+:X: .x++XXX:;:.:.;;;::;;;;;
+ $ ++XXXXX+xxxx;+&amp;:;  +X+;;X.             .&amp;$$X$$&amp;$+   .  . .;.;:.+X:XX;:.:.XXX$XXXXXXXxX$X$&amp;$X
+X   .+XXXXXXxX+X++. ..XX+;xx;..          .Xx+;;.       : ..;...;.X+x x+&amp;X.;.XXXx++x+Xxx++xX++X+
+x: ; .xXxXXXXX++x.:+:+++XX+xx;;.           ;+x++;..    .  .;:.:;;xX+.X$Xxx ;;++;+xxXXXXXXXXX$+X
+:$x:;X&amp;XXXXXxxxX;XxX$XxXXXX+$+;.         +.        ..  ..:...:;;;X$+;$&amp;XxxX ;;;xX++x;XX+x;XXXXX
+;XxX:  ++XXxX+XX:XXxX$XxxX;xXx;:.   .     ;XXXxXXXx+;  .:;;.:;Xx$++$ .xx$$x;.X+Xx+++xXXx++xXXX+
+:;;;;.    xXXX+++;XXXXXx+XxxX;;;;. . .               . .::+:++XXX$xX: XXXXXXXXX+x+;++++x;XXXXXX
+          ..;xxXxxXXXx+xxx+XX;;.:.:               .;:;;;;;;XxX$XxxXx$X&amp;XXXXxx++xx;;++;;;++;XXXX
+     ;;  ..;;.++xX+Xx+xX:;XXxx;;x..      .. .    .:+Xx+X$XXxXXXXXX+$+.;XXXxxx+x+;;;+++x;x+XXX X
+   :+$   +  . :;.$X+xXxx   X+X;;;:;...:;x;+x$X$$$$&amp;&amp;$&amp;$X$X$$$x$$X$;. ;Xxx$Xxx++++;x;+X:xx+XXXxX
+   &amp;$:  ;.  .   X xxX+.xXXXx;+;;;;:;;:;;;x+XxX$$$&amp;$X$&amp;&amp;&amp;&amp;&amp;$XX$X$xXX+ ;:XXXXX+xx++X+;+Xxx+XXXXXX
+  &amp;X  . X    ;      : ;XX$X+X;;;+;;;;;:;.;;;+xX+X$$$X&amp;$$X$X$+XXXXXXXXXXXXxXX ;++xx;+++xXx++XXXX
+                    </pre>
+          <pre class="ascii-art ascii-dark">
+:..::...... .;.;.:;;.:...$XXxxXX+;&amp;Xxx+Xx;:.$$::  .XX...;: .X$;.:;;;;.;XX:;;:;;.::.........  . 
+ .. ...........;:.;..;:...XXXX+$$$;::.$$:. .:&amp;+;...&amp;X.   .XXXx.+&amp;XX+.;.X;;..::.;::....:....... 
+.............::..;.;;:;:;..x;XxX$&amp; :..$&amp;;::  &amp;;;;X+$x   .$$....;..$&amp; :.;;::;:....:..:;...:.....
+....... ...;:.::.:;:::;::;+:$.;;:&amp;x;: :$X..;.&amp;:...:&amp;... ;$  . .$Xx;;;$;:+:;.;.::......:;.... .:
+.. .:.::..;.:;:;.;......+ X$:;.:;$&amp;;. .&amp;$+:.;$::::.&amp;. :.x&amp;....$&amp;::....XX;;;;...;.....:.........
+....;...:..;;.;:;.:...;;x..:$&amp; :..&amp;::.X&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$&amp;&amp;&amp;&amp;&amp;$&amp;&amp;$ ..:&amp;;.:.:&amp;$x.X;:;:::;;.....::......x
+:....:......:.::...:;; ;....:&amp;$.:&amp;&amp;&amp;&amp;&amp;$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;X$&amp;&amp;&amp;&amp;&amp;$&amp;&amp;&amp;$&amp;. .:$$.:;X;;;:::.:::;;.;X&amp;+.;;;.
+x;++++:.;;XxXx+XX$$X;.. ;$...x&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$&amp;&amp;&amp;X$&amp;$x+$X&amp;X&amp;&amp;&amp;&amp;&amp;$$$&amp;&amp;&amp;.&amp;$..:;.;.:;::;&amp;$:;;+;.+;:....
+X;+xxx++x++XXx;;;+X;;.  ..X+;&amp;&amp;&amp;&amp;&amp;$&amp;&amp;$&amp;XX&amp;;x;:.&amp;&amp;;.;+.$$$&amp;&amp;&amp;&amp;&amp;&amp;$X$$;...&amp;X+;.:..:.+;+x;x.;. .:..
+&amp;$.; ;+Xx+xXXxx;x+:;xX;  ::&amp;&amp;&amp;&amp;&amp;&amp;&amp;$$X;:xx+;:$&amp;&amp;$&amp;&amp;&amp;+; .+;+X&amp;$&amp;&amp;X$&amp;X&amp;.&amp;X:. .;X::+;;;;;.....:;:..
+x;:..;.:.... ;x+x+:: ..X$.&amp;&amp;&amp;&amp;$&amp;$;;;;x: $&amp;&amp;&amp;&amp;&amp;&amp;$$&amp;&amp;&amp;&amp;&amp;:..+x;xX$$$X+X$&amp;.:  ;+. .;;. ;:::::....;.
+&amp;$X;....:..;....:..;. . X&amp;&amp;&amp;&amp;$Xxx.;:.:&amp;$&amp;&amp;&amp;&amp;&amp;&amp;&amp;$$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;;..;;+;;:xX+xxX&amp;X.;:..:.:.:.;::X:.....
+   $.:.::;:.::::.:.;$X .&amp;&amp;$$+;:::. &amp;&amp;&amp;$$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$&amp;&amp;&amp;&amp;&amp;$&amp;&amp;&amp;&amp;&amp;;. .;+X+xxXX. ..  .;;;;;;:..:.::...
+:..;&amp;;..x$.;...;. ...:x$X++.;;:. &amp;$$XXxxx;.x$&amp;&amp;&amp;$$$&amp;+.:;;$$XX&amp;X..;;:;:;$.:$X  .;;:;:;:...:;.;.:
+&amp;XXx.;..:.;:;.;.: ;   .:;;;+;...X$$$$x;:;;;.X&amp;&amp;&amp;&amp;$$:     ...$$$&amp; :.:...;X:..:;+;;+::;.::;..;:.X
+&amp;&amp;&amp;X$&amp;;+X$&amp;&amp;X;;;. ..+..:;...:;.XX++;;;;;:;. $$$&amp;xXX;    ;++;.X&amp;$. +;;.+X;;: + ;::X;+:;.::;:;.:;
+$;...;;+;+:;+.;+.: .:;;..::;::+;;;::$$$$X+;X$$&amp;&amp;$xX$  X$$&amp;$$x;:xXx: ..:..+&amp;.:.;XX;;:::.:.::::.:
+.. .:;:;;+x++;++:;  $$&amp;xx;;;:..:+;x&amp;&amp;$$$$$$$X$$&amp;$Xx$$$&amp;&amp;&amp;$$&amp;&amp;+.:;X.;..;X$:. : .;::;;+x;:.+XXX:.
+ . . .:.;;+XxxX;:.;X+X&amp;+;;++.::;xX$&amp;&amp;$X$&amp;&amp;$+X$$&amp;&amp;$XX$$$&amp;&amp;XX&amp;$$X..X;...x+X;X.$;.;;xxxXxx;+++++xx
+.$.. .......:.:.;. $$$X;:;;; $:$&amp;&amp;&amp;&amp;X&amp;&amp;&amp;&amp;&amp;$...:.. .+$&amp;&amp;$&amp;&amp;$$&amp;XXXX&amp;;;x.x$X:;;...x+xXxX;++xx+;++;
+&amp; &amp;;;.....;:;::;; x;$$;.;;x.X$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;X   .    ;&amp;&amp;&amp;X$$X$X+$+xX;.x..+xXxX... .......:. .   .
+.&amp;$&amp;X;......:.;.;;X$XX..;+::+XX&amp;$&amp;&amp;&amp;$$&amp;&amp;&amp;X.:;;;X&amp;&amp;$$&amp;&amp;&amp;x$XX+XXX;X.;:$:; .X+X...:;;:;.::;;:.;;.;
+:x&amp;;$X:.:.....;;:Xx;x;;;..;::++X$$&amp;$$&amp;&amp;&amp;$&amp;$+;:;;+X$$&amp;&amp;$X$$X+xXx++:.;X. .::$+;;;;;::.......:. ;.
+x :x;. .....:::.;.:. .;....; ;xX$&amp;$&amp;$&amp;&amp;&amp;&amp;;X$&amp;&amp;$$&amp;$&amp;XX$$XXxXXXx+;;. ;+  .::.$+;;:.;;:+..;:;.....
+;.:.x$&amp;;;..:.;..x..:. .::.+:.:+xX$$$X$&amp;&amp;&amp;$;...:...:;;$$Xx+;Xx;.: ;; $X::  :+X.;.:;;;:..:;;:...;
+x++;;X$$$&amp;:...;;;;..:..:;.::.;+;+X&amp;X$$&amp;&amp;&amp;&amp;&amp;&amp;&amp;$$$$$$&amp;$X$Xxx;x;;... :.x&amp;.........;;;;;;;;:;......
+&amp;$$$&amp;$$$$$XX;::.::...:;:::;..;+XxXx$$$$$$&amp;$$$$$$$$$+x++;+;+.:. .::.: : ....::;;::;;;;;;+;;;....
+&amp;&amp;&amp;&amp;&amp;;+$&amp;XX++X;;:.;.:;:.x+.:::++:XX$$$$&amp;$XX$X$$$$Xx;.:;. ..:......; ;X+...:::;:;;;+;;;:;:;...&amp;.
+$&amp;&amp;X; $&amp;$;&amp;&amp;X&amp;x+X .;:.::&amp;&amp;&amp;.;.;+xx+XXXx+:;;: .         . .   :  . ;X&amp;+.:: .::;;;;;:;;.X::;...:.
+&amp;&amp;&amp;  x&amp;&amp;+X&amp;&amp;X$&amp;$.&amp;:;.;X:...:;;;;;;X++x++;:;.:.     .       .. . :..;$;x.....;::;;.;+;.::;......
+&amp;&amp; .&amp;&amp;X&amp;.&amp;&amp;&amp;$;&amp;&amp;&amp;$&amp;$x&amp;+.. .;.;++;+++;;x+X+;;;:.;.   .   . . ;............:..$;;;:;;;;;:.:;;....
+                    </pre>
+        </div>
+      </div>
+      <div
+        style="padding: 15px; font-size: 0.7rem; text-transform: uppercase; width: 100%; display: flex; flex-direction: column; justify-content: space-between; line-height: 1.6;">
+        <div>
+          <span style="color: var(--accent-color); font-weight: bold;">// PROFILE</span><br><br>
+          <span style="font-weight: bold;">ROLE:</span> FULLSTACK<br>
+          <span style="font-weight: bold;">BASE:</span> LINUX<br>
+          <span style="font-weight: bold;">PASSION:</span> AI & ML
+        </div>
+        <div style="color: var(--line-color); opacity: 0.6; transition: color 0.3s;">
+          LOC: INTERNET
+        </div>
+      </div>
+    </div>
+
+    <div class="cell code-box">
+      <div class="code-scroller">
+        <div class="code-content">import { NextRequest, NextResponse } from 'next/server';
+          import { db } from '@/lib/db';
+          import { verifyAuth } from '@/lib/auth';
+
+          export async function GET(req: NextRequest) {
+          try {
+          const authHeader = req.headers.get('authorization');
+          const isValid = await verifyAuth(authHeader);
+
+          if (!isValid) {
+          return NextResponse.json(
+          { error: 'Unauthorized Access' },
+          { status: 401 }
+          );
+          }
+
+          const url = new URL(req.url);
+          const userId = url.searchParams.get('id');
+
+          if (!userId) {
+          return NextResponse.json(
+          { error: 'User ID is required' },
+          { status: 400 }
+          );
+          }
+
+          const user = await db.query(
+          'SELECT id, name, role FROM users WHERE id = $1',[userId]
+          );
+
+          if (!user.length) {
+          return NextResponse.json(
+          { error: 'User not found in registry' },
+          { status: 404 }
+          );
+          }
+
+          return NextResponse.json({
+          status: 'success',
+          timestamp: Date.now(),
+          data: user[0],
+          });
+          } catch (error) {
+          console.error('[API_ERROR]:', error);
+          return NextResponse.json(
+          { error: 'Internal Server Error' },
+          { status: 500 }
+          );
+          }
+          }</div>
+      </div>
+    </div>
+
+    <div class="cell hero">
+      <span class="star left">✳</span>
+      <span class="micro-text micro-tl" style="left: 30px; top: 15px;">LOVE + HUGS</span>
+      <h1 class="main-title">yaalpha</h1>
+      <span class="star right">✳</span>
+    </div>
+
+    <div class="cell info-box">
+      <div class="info-title">The reinvention of digital aesthetics through clean code and brutalist design.</div>
+      <div class="info-sub">/ fullstack engineering & ui architecture /</div>
+    </div>
+    <div class="cell red-box">
+      <div class="red-glyphs">
+        <a href="https://github.com/yaalpha" target="_blank" title="GitHub">
+          GITHUB
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+        </a>
+      </div>
+      <div class="red-box-footer">HUMAN / EXPRESSION / INTEGRATION</div>
+    </div>
+
+    <div class="cell bottom-grid-deco"><span class="micro-text micro-tl">GRID_SYS</span></div>
+    <div class="cell bottom-marquee-cell">
+      <div class="marquee-track">
+        <div class="marquee-text">NEXT.JS // PRISMA // TYPESCRIPT // TAILWIND // REACT // RUST // NEST.JS // POSTGRESQL // </div>
+        <div class="marquee-text">NEXT.JS // PRISMA // TYPESCRIPT // TAILWIND // REACT // RUST // NEST.JS // POSTGRESQL // </div>
+      </div>
+    </div>
+
+    <div class="cell bottom-img">
+      <span class="micro-text micro-tl"
+        style="color: var(--bg-color); opacity: 0.6; transition: color 0.3s;">RENDER.ENGINE</span>
+      <div class="scene">
+        <div class="cube">
+          <div class="cube-face front"></div>
+          <div class="cube-face back"></div>
+          <div class="cube-face right"></div>
+          <div class="cube-face left"></div>
+          <div class="cube-face top"></div>
+          <div class="cube-face bottom"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
