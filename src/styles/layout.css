@@ -18,13 +18,3 @@
     padding: 20px; position: relative; overflow: hidden;
     transition: background-color 0.3s, border-color 0.3s;
 }
-@media (max-width: 900px) {
-    .wrapper { grid-template-columns: 1fr 80px; grid-template-rows: auto; }
-    .header-nav, .code-box { display: none; }
-    .cell { grid-column: 1 / -1 !important; }
-    .header-logo { grid-column: 1 / 2 !important; }
-    .theme-toggle { display: flex !important; grid-column: 2 / 3 !important; }
-    .avatar-box { flex-direction: column; height: auto; }
-    .avatar-img { width: 100%; height: 200px; border-right: none; border-bottom: 1px solid var(--line-color); }
-    .scanline { --scan-end: 205px; } 
-}
